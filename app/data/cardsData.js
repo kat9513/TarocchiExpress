@@ -131,4 +131,6 @@ var cardsArray =     [
         "description":"",
         "img":""
     }
-]
+];
+
+module.exports = cardsArray;
