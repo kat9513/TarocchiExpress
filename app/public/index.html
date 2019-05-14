@@ -3,9 +3,9 @@
 
 <head>
     <title>Tarocchi</title>
-    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-    crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous">
+        </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
@@ -17,15 +17,15 @@
             minus nihil esse voluptates! Placeat nostrum sapiente voluptates provident earum nisi illo itaque deleniti
             voluptas ab?
         </p>
-        
+
         <button class="btn btn-danger" id="submit">Click Here</button>
-        
+
         <div id="deck">
         </div>
-        
+
         <div class="card-body">
             <ul id="cardReading">
-             </ul>
+            </ul>
         </div>
 
         <div>
@@ -36,28 +36,28 @@
 
 </body>
 <script type="text/javascript">
-    /*$("#submit").on("click", function () {
-        alert("hey girl!")
-    })*/
+    $("#submit").on("click", function () {
+        function runCardsQuery() {
+            $.ajax({ url: "/api/cards", method: "GET" })
+                .then(function (cardsData) {
+                    for (var i = 0; i < cardsData.length; i++) {
 
-    function runCardsQuery(){        
-        $.ajax({url: "/api/cards", method: "GET"})
-        .then(function(cardsData){            
-            for (var i = 0; i < cardsData.length; i++){
+                        var cardReading = $("#cardReading");
 
-                var cardReading= $("#cardReading");
+                        var listItem = $("<li class='list-group-item mt-4'>");
 
-                var listItem = $("<li class='list-group-item mt-4'>");
+                        listItem.append(
+                            $("<h2>").text(cardsData[i].name),
+                        );
 
-                listItem.append(
-                    $("<h2>").text(cardsData[i].name),
-                );
+                        cardReading.append(listItem);
+                    }
+                    console.log(cardsData);
+                })
+        }
+        runCardsQuery();
+    })
 
-                cardReading.append(listItem);
-            }
-            console.log(cardsData);
-        })
-    }
-    runCardsQuery();
 </script>
+
 </html>
