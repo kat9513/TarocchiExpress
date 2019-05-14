@@ -40,9 +40,19 @@
         function runCardsQuery() {
             $.ajax({ url: "/api/cards", method: "GET" })
                 .then(function (cardsData) {
-                    for (var i = 0; i < cardsData.length; i++) {
 
-                        var cardReading = $("#cardReading");
+                    //shuffle deck
+                    cardsData.sort(
+                        function(){
+                            return 0.5 - Math.random()
+                        }
+                    );
+
+                    var cardReading = $("#cardReading");
+
+                    cardReading.empty();
+
+                    for (var i = 0; i < 3; i++) {
 
                         var listItem = $("<li class='list-group-item mt-4'>");
 
