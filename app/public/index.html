@@ -40,12 +40,27 @@
         function runCardsQuery() {
             $.ajax({ url: "/api/cards", method: "GET" })
                 .then(function (cardsData) {
-                    for (var image in cardsData) {
-                        for (var x = 0; x < cardsData[image].length; x++){
-                            var display = cardsData[image][x].display;
-                            console.log(display)
-                        }     
-                    };
+                    //console.log(cardsData[0].img[0]);
+
+                    var cardReading = $("#cardReading");
+
+                    cardReading.empty();
+
+                    for (var i = 0; i < 3; i++) {
+                        var card = cardsData[i];
+                        for (var j = 0; j < 1; j++) {
+
+                            var cardItem = $("<div class= 'cardItem'>");
+
+                            var display = card.img[Math.floor(Math.random()*card.img.length)];
+                                console.log(display);
+                            cardItem.append(
+                                $("<img>").attr("src", display),
+                            );
+
+                            cardReading.append(cardItem);
+                        }
+                    }
                     //shuffle deck
                     /*
                      cardsData.sort(
@@ -54,17 +69,15 @@
                          }
                      );
                      
-
+                    //empty cardReading div in html
                     var cardReading = $("#cardReading");
 
                     cardReading.empty();
-
+                         
+                    //iterate through cardData array and append to page
                     for (var i = 0; i < 3; i++) {
 
                         var listItem = $("<li class='list-group-item mt-4'>");
-
-                    
-
 
                         listItem.append(
                             $("<h2>").text(cardsData[i].name),
@@ -75,7 +88,7 @@
                     }
                     console.log(cardsData);
                 */
-               }) 
+                })
         }
         runCardsQuery();
     })
