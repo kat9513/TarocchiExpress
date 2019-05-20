@@ -40,13 +40,20 @@
         function runCardsQuery() {
             $.ajax({ url: "/api/cards", method: "GET" })
                 .then(function (cardsData) {
-
+                    for (var image in cardsData) {
+                        for (var x = 0; x < cardsData[image].length; x++){
+                            var display = cardsData[image][x].display;
+                            console.log(display)
+                        }     
+                    };
                     //shuffle deck
-                    cardsData.sort(
-                        function(){
-                            return 0.5 - Math.random()
-                        }
-                    );
+                    /*
+                     cardsData.sort(
+                         function(){
+                             return 0.5 - Math.random()
+                         }
+                     );
+                     
 
                     var cardReading = $("#cardReading");
 
@@ -56,14 +63,19 @@
 
                         var listItem = $("<li class='list-group-item mt-4'>");
 
+                    
+
+
                         listItem.append(
                             $("<h2>").text(cardsData[i].name),
+                            //$("<img>").attr("src", cardsData[i].img), 
                         );
 
                         cardReading.append(listItem);
                     }
                     console.log(cardsData);
-                })
+                */
+               }) 
         }
         runCardsQuery();
     })
