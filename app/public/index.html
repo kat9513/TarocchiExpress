@@ -3,11 +3,8 @@
 
 <head>
     <title>Tarocchi</title>
-    <script src="https://code.jquery.com/jquery-3.4.0.js"
-        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous">
-        </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
 <body>
@@ -36,6 +33,9 @@
     </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+    crossorigin="anonymous">
+    </script>
 <script type="text/javascript">
     $("#submit").on("click", function () {
         function runCardsQuery() {
@@ -68,33 +68,7 @@
                             cardReading.append(cardItem);
                         }
                     }
-                    //shuffle deck
-                    /*
-                     cardsData.sort(
-                         function(){
-                             return 0.5 - Math.random()
-                         }
-                     );
-                     
-                    //empty cardReading div in html
-                    var cardReading = $("#cardReading");
-
-                    cardReading.empty();
-                         
-                    //iterate through cardData array and append to page
-                    for (var i = 0; i < 3; i++) {
-
-                        var listItem = $("<li class='list-group-item mt-4'>");
-
-                        listItem.append(
-                            $("<h2>").text(cardsData[i].name),
-                            //$("<img>").attr("src", cardsData[i].img), 
-                        );
-
-                        cardReading.append(listItem);
-                    }
                     console.log(cardsData);
-                */
                 })
         }
         runCardsQuery();
