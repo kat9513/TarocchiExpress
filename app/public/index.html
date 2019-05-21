@@ -35,13 +35,13 @@
             </div>
 
 
+        </div>
     </div>
-</div>
-        <footer class="footer navbar-fixed-bottom">
-            <div class="text-center">
-                <a class="apiLink" href="/api/cards">Card API</a>
-            </div>
-        </footer>
+    <footer class="footer navbar-fixed-bottom">
+        <div class="text-center">
+            <a class="apiLink" href="/api/cards">Card API</a>
+        </div>
+    </footer>
 
 </body>
 
@@ -55,41 +55,43 @@
         function runCardsQuery() {
             $.ajax({ url: "/api/cards", method: "GET" })
                 .then(function (cardsData) {
-                    
+
                     //shuffle deck
-                   /* cardsData.sort(
-                        function () {
-                            return 0.5 - Math.random()
-                        }
-                    );*/
-                    
+                    /* cardsData.sort(
+                         function () {
+                             return 0.5 - Math.random()
+                         }
+                     );*/
+
                     //references html div.cardReading
                     var cardReading = $("#cardReading");
-                    
+
                     //empties div so function can run more than once without refreshing
                     cardReading.empty();
 
                     //iterates through first three cards in shuffled deck
                     for (var i = 0; i < 3; i++) {
                         var card = cardsData[i];
-                        
+
                         //iterates through our nested image array
                         for (var j = 0; j < 1; j++) {
 
                             var cardItem = $("<div class= 'cardItem col-md-10 mx-auto'>");
 
                             var display = card.img[Math.floor(Math.random() * card.img.length)];
-                            
-                            console.log(display);
-                            
-                            cardItem.append(
-                                $("<img>").addClass("cardImage col-md-3").attr("src", display),
-                                $("<div>").addClass("description col-md-5").append("<p>hello babes</p>")
-                            );
-                            
-                            cardReading.append(cardItem);
+
+                            function appendCards() {
+                                cardItem.append(
+                                    $("<img>").addClass("cardImage col-md-3").attr("src", display),
+                                    $("<div>").addClass("description col-md-5").append("<p>hello babes</p>")
+                                );
+
+                                cardReading.append(cardItem);
+                            }
 
                         }
+                        appendCards();
+                        console.log(display);
                     }
                     console.log(cardsData);
                 })
@@ -97,6 +99,15 @@
         runCardsQuery();
     })
 
+    /*  function aboutCards(){
+         if(display = card.img[0]){
+             console.log(card.description[0])
+            }
+         else if(display = card.img[1]){
+             console.log(card.description[1])
+            }
+            };
+        aboutCards();   */
 </script>
 
 </html>
