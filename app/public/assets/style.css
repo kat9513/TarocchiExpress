@@ -1,14 +1,53 @@
-body{
-    background: red;
-    color: blue;
+html, body{
+    height: 100%;
+    background: #F7EDF0;
+    color: #9F9AA4;
+}
+.wrap{
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    margin: 0 auto -60px;
+    /* Pad bottom by footer height */
+    padding: 0 0 60px;
+}
+.footer{
+    height: 60px;
 }
 #about{
     background: #9F9AA4;
     color: #EAEFB1;
+    padding: 2%;
+}
+#cards{
+    background: #F7EDF0;
+    color: #9F9AA4; 
 }
 .btn.outline{
     background: none;
     padding: 12px 22px;
-    border: 2px solid #0099cc;
-	color: #0099cc;
+    border: 2px solid #EAEFB1;
+	color: #EAEFB1;
 }
+.btn.outline:hover {
+    color:#F9FAE9;
+    border: 2px solid #F9FAE9;
+}
+.btn.outline:active{
+    border-color: #C0C491;
+	color: #C0C491;
+    box-shadow: #EAEFB1;
+}
+.btn.outline:focus{
+    outline: #C0C491;
+    box-shadow: #EAEFB1;
+}
+.cardItem{
+    display: flex;
+    align-items: center;
+}
+.apiLink{
+    color: #9F9AA4;
+}
+
+

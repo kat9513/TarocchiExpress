@@ -4,7 +4,12 @@ var cardsArray = [
     {
         "id": 1,
         "name": "The Fool",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
+        
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theFool_zpsbl6v2sve.jpg",
@@ -16,7 +21,11 @@ var cardsArray = [
     {
         "id": 2,
         "name": "The Magician",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theMagician_zps8zwbpigd.jpg",
@@ -26,7 +35,11 @@ var cardsArray = [
     {
         "id": 3,
         "name": "The High Priestess",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/highPriestess_zpsf47rtdkf.jpg",
@@ -36,7 +49,11 @@ var cardsArray = [
     {
         "id": 4,
         "name": "The Empress",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theEmpress_zpstyrugqlh.jpg",
@@ -46,7 +63,11 @@ var cardsArray = [
     {
         "id": 5,
         "name": "The Emperor",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theEmporer_zpsviolpx1c.jpg",
@@ -56,7 +77,11 @@ var cardsArray = [
     {
         "id": 6,
         "name": "The Hierophant",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theHierophant_zpswq9pe5ga.jpg",
@@ -66,7 +91,11 @@ var cardsArray = [
     {
         "id": 7,
         "name": "The Lovers",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theLovers_zpsrddpqlcn.jpg",
@@ -76,7 +105,11 @@ var cardsArray = [
     {
         "id": 8,
         "name": "The Chariot",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theChariot_zps1tycc6hs.jpg",
@@ -86,7 +119,11 @@ var cardsArray = [
     {
         "id": 9,
         "name": "Strength",
-        "description": "",
+        "description":         
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Strength_zpsge3xtzvj.jpg",
@@ -96,7 +133,11 @@ var cardsArray = [
     {
         "id": 10,
         "name": "The Hermit",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/theHermit_zpshxbw7bm9.jpg",
@@ -106,7 +147,11 @@ var cardsArray = [
     {
         "id": 11,
         "name": "Wheel of Fortune",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/wheelOfFortune_zpswhmpyala.jpg",
@@ -116,7 +161,11 @@ var cardsArray = [
     {
         "id": 12,
         "name": "Justice",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Justice_zpsaxgnzjbz.jpg",
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/JusticeReverse_zps7fypyqve.jpeg"
@@ -125,7 +174,11 @@ var cardsArray = [
     {
         "id": 13,
         "name": "The Hanged Man",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/hangedMan_zpss04thidy.jpg",
@@ -135,7 +188,11 @@ var cardsArray = [
     {
         "id": 14,
         "name": "Death",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Death_zpsyt972v0w.jpg",
@@ -145,7 +202,11 @@ var cardsArray = [
     {
         "id": 15,
         "name": "Temperance",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Temperance_zpsyioi4vwm.jpg",
@@ -155,7 +216,11 @@ var cardsArray = [
     {
         "id": 16,
         "name": "The Devil",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Devil_zpslelc1dmr.jpg",
@@ -165,7 +230,11 @@ var cardsArray = [
     {
         "id": 17,
         "name": "The Tower",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Tower_zpsa5jo33la.jpg",
@@ -175,7 +244,11 @@ var cardsArray = [
     {
         "id": 18,
         "name": "The Star",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Star_zpsfxn7xac5.jpg",
@@ -185,7 +258,11 @@ var cardsArray = [
     {
         "id": 19,
         "name": "The Moon",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Moon_zpstkrirzez.jpg",
@@ -195,7 +272,11 @@ var cardsArray = [
     {
         "id": 20,
         "name": "The Sun",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Sun_zpss1tve2tm.jpg",
@@ -205,7 +286,11 @@ var cardsArray = [
     {
         "id": 21,
         "name": "Judgement",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/Judgement_zps3jhe677i.jpg",
@@ -215,7 +300,11 @@ var cardsArray = [
     {
         "id": 22,
         "name": "The World",
-        "description": "",
+        "description": 
+        [
+            "upright",
+            "reversed"
+        ],
         "img": 
         [
             "https://i48.photobucket.com/albums/f209/Katie_Higgins/tarocchi/World_zpseb9wykds.jpg",
