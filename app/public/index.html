@@ -8,20 +8,25 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Tarocchi</h1>
-        <p>
-            about tarocchi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nobis velit ea quo commodi,
-            minus nihil esse voluptates! Placeat nostrum sapiente voluptates provident earum nisi illo itaque deleniti
-            voluptas ab?
+    <div id="about">
+
+                <h1 class="text-center">Tarocchi</h1>
+        <div class="row justify-content-center">
+                <p class = "col-md-8" >
+                        about tarocchi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nobis velit ea quo commodi,
+                        minus nihil esse voluptates! Placeat nostrum sapiente voluptates provident earum nisi illo itaque deleniti
+                        voluptas ab?
         </p>
+    </div>
+     <div class="row justify-content-center">
+            <button class="btn outline" id="submit">Click For a Reading</button>
+     </div>   
 
-        <button class="btn btn-danger" id="submit">Click Here</button>
-
+    <div id="cards">
         <div id="deck">
         </div>
 
-        <div class="card-body row">
+        <div class="card-body">
             <div id="cardReading">
             </div>
         </div>
@@ -29,14 +34,15 @@
         <div>
             <a href="/api/cards">Card API</a>
         </div>
-
     </div>
-
 </body>
+
 <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
     crossorigin="anonymous">
     </script>
+
 <script type="text/javascript">
+
     $("#submit").on("click", function () {
         function runCardsQuery() {
             $.ajax({ url: "/api/cards", method: "GET" })
