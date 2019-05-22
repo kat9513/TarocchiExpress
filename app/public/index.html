@@ -73,6 +73,7 @@
                     for (var i = 0; i < 3; i++) {
                         var card = cardsData[i];
 
+                        
                         //iterates through our nested image array
                         for (var j = 0; j < 1; j++) {
 
@@ -82,8 +83,8 @@
 
                             function appendCards() {
                                 cardItem.append(
-                                    $("<img>").addClass("cardImage col-md-3").attr("src", display),
-                                    $("<div>").addClass("description col-md-5").append("<p>hello babes</p>")
+                                    $("<img>").addClass("cardImage col-md-3").attr("src", display.image),
+                                    $("<div>").addClass("description col-md-5").append("<h3>"+card.name+"</h3><br>" + "<p>"+ display.description +"</p>")
                                 );
 
                                 cardReading.append(cardItem);
@@ -92,6 +93,7 @@
                         }
                         appendCards();
                         console.log(display);
+                        
                     }
                     console.log(cardsData);
                 })
