@@ -4,6 +4,7 @@
 <head>
     <title>Tarocchi</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gudea|Righteous&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
@@ -13,7 +14,7 @@
 
         <div id="about">
 
-            <h1 class="text-center">Tarocchi</h1>
+            <h1 class="text-center title">Tarocchi</h1>
             <div class="row justify-content-center">
                 <p class="aboutHeading col-md-8">
                     The word Tarot is derived from the Italian Tarocchi, and though the origins of the cards are disputed the earliest documentation of tarot packs are recorded from Northern Italy
@@ -91,7 +92,7 @@
                             function appendCards() {
                                 cardItem.append(
                                     $("<img>").addClass("cardImage col-md-3").attr("src", display.image),
-                                    $("<div>").addClass("description col-md-7").append("<h3>"+card.name+"</h3><br>" + "<p>"+ display.description +"</p>")
+                                    $("<div>").addClass("description col-md-7").append("<h3 class='title'>"+card.name+"</h3><br>" + "<p>"+ display.description +"</p>")
                                 );
 
                                 cardReading.append(cardItem);
@@ -107,16 +108,6 @@
         }
         runCardsQuery();
     })
-
-    /*  function aboutCards(){
-         if(display = card.img[0]){
-             console.log(card.description[0])
-            }
-         else if(display = card.img[1]){
-             console.log(card.description[1])
-            }
-            };
-        aboutCards();   */
 </script>
 
 </html>

@@ -2,6 +2,11 @@ html, body{
     height: 100%;
     background: #F7EDF0;
     color: #9F9AA4;
+    font-family: 'Gudea', sans-serif;
+
+}
+.title{
+    font-family: 'Righteous', cursive;
 }
 .wrap{
     min-height: 100%;
@@ -54,10 +59,12 @@ p {
     }
 .aboutHeading{
     font-size: 14pt;
+    font-weight: bold;
 }    
 .about{
-    font-size: 10pt;
+    font-size: 11pt;
 }
+
  
 
 
