@@ -49,5 +49,15 @@ html, body{
 .apiLink{
     color: #9F9AA4;
 }
+p {
+    padding: 1px;
+    }
+.aboutHeading{
+    font-size: 14pt;
+}    
+.about{
+    font-size: 10pt;
+}
+ 
 
 

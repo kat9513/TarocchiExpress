@@ -15,12 +15,19 @@
 
             <h1 class="text-center">Tarocchi</h1>
             <div class="row justify-content-center">
-                <p class="col-md-8">
-                    about tarocchi Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nobis velit ea quo
-                    commodi,
-                    minus nihil esse voluptates! Placeat nostrum sapiente voluptates provident earum nisi illo itaque
-                    deleniti
-                    voluptas ab?
+                <p class="aboutHeading col-md-8">
+                    The word Tarot is derived from the Italian Tarocchi, and though the origins of the cards are disputed the earliest documentation of tarot packs are recorded from Northern Italy
+                    in the mid-Quattrocento, or the early Renaissance. 
+                </p>
+                    <br/>
+                <p class="about col-md-8">
+                    These early tarot packs would have been hand painted for the purpose of gaming, with little mysticism in the minds of their creators. It was not until 
+                    the 18th century that the use of tarot decks for cartomancy became widespread, and a that they developed a new association with the occult. 
+                </p>    
+                    <br/>
+                <p class="about col-md-8">
+                    There are many holes in the story of how tarot came to be associated with divination, but their enigmatic origins and charming illustrations will no doubt continue captivating us for years to come.
+                    To recieve a tarot reading of your own, try the button below!
                 </p>
             </div>
             <div class="row justify-content-center">
@@ -84,7 +91,7 @@
                             function appendCards() {
                                 cardItem.append(
                                     $("<img>").addClass("cardImage col-md-3").attr("src", display.image),
-                                    $("<div>").addClass("description col-md-5").append("<h3>"+card.name+"</h3><br>" + "<p>"+ display.description +"</p>")
+                                    $("<div>").addClass("description col-md-7").append("<h3>"+card.name+"</h3><br>" + "<p>"+ display.description +"</p>")
                                 );
 
                                 cardReading.append(cardItem);
