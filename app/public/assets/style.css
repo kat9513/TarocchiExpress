@@ -36,14 +36,14 @@ p{
 .intro1{
     grid-area: welcome;
     align-self: center;
-    position: fixed;
+    position: sticky;
     top: 2em;
     margin-bottom: 1.5em;
 }
 .intro2{
     grid-area: italian;
     font-weight: 600;
-    position: fixed;
+    position: sticky;
     top: 3.5em;
     align-self: center;
 }
@@ -51,7 +51,7 @@ p{
     grid-area: tarocchi;
     font-weight: 600;
     font-style: italic;
-    position: fixed;
+    position: sticky;
     align-self: end;
 }
 
@@ -78,7 +78,7 @@ p{
     margin-bottom: 100vh;
 }
 .moreAboutText{
-    position: fixed;
+    position: sticky;
     top: 20vh;
     grid-area: text;
     align-self: start;
@@ -125,7 +125,7 @@ p{
     position: relative;
     z-index: 2;
     color: var(--clr-3);
-    position: fixed;
+    position: sticky;
     top: 2em;
     margin: 0 auto;
 }
@@ -173,9 +173,7 @@ footer{
 .apiLink{
     color: var(--clr-1);
 }
-@media only screen and (min-width: 860px){
-    
-}
+
 
  
 
