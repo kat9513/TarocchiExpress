@@ -44,7 +44,7 @@ p{
     grid-area: italian;
     font-weight: 600;
     position: -webkit-sticky; position: sticky;
-    top: 3.5em;
+    top: 5em;
     align-self: center;
 }
 .intro3{
@@ -114,6 +114,7 @@ p{
   }
 
 .cards{
+    margin: 0;
     background: url(stars.jpg);
     background-size: cover;
     padding: 2em;
@@ -175,10 +176,6 @@ footer{
 }
 
 @media (min-width: 600px) {
-    p.intro1{
-        font-size: 4rem;
-        margin-bottom: 35vh;
-    }
     .cards::before{
         background:linear-gradient(#D67B17 20%, transparent, var(--clr-5) 90%); 
     }
