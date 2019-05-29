@@ -1,69 +1,167 @@
-html, body{
-    height: 100%;
-    background: #F7EDF0;
-    color: #9F9AA4;
-    font-family: 'Gudea', sans-serif;
+:root{
+    --clr-1: #220901;
+    --clr-2: #621708;
+    --clr-3: #941B0C;
+    --clr-4: #BC3908;
+    --clr-5: #F6AA1C;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: sans-serif;
+    font-weight: 300;
+    background: linear-gradient(var(--clr-3), var(--clr-5));
+    min-height: 100vh;
+    margin: 0;
+    color: var(--clr-1);
+    font-size: 24px;
+}
 
+p{
+    margin: 0;
 }
-.title{
-    font-family: 'Righteous', cursive;
+
+.intro{
+    display: grid;
+    grid:
+        "welcome welcome" 75vh
+        "italian tarocchi" 125vh/ max-content 1fr;
+    margin-bottom: 60vh;
+    grid-gap: 15px;
+    font-size: 3rem;
 }
-.wrap{
-    min-height: 100%;
-    height: auto;
-    /* Negative indent footer by its height */
-    margin: 0 auto -60px;
-    /* Pad bottom by footer height */
-    padding: 0 0 60px;
+
+.intro1{
+    grid-area: welcome;
+    align-self: center;
+    position: sticky;
+    top: 2em;
+    margin-bottom: 1.5em;
 }
-.footer{
-    height: 60px;
+.intro2{
+    grid-area: italian;
+    font-weight: 600;
+    position: sticky;
+    top: 3.5em;
+    align-self: center;
 }
-#about{
-    background: #9F9AA4;
-    color: #EAEFB1;
-    padding: 2%;
+.intro3{
+    grid-area: tarocchi;
+    font-weight: 600;
+    font-style: italic;
+    position: sticky;
+    align-self: end;
 }
-#cards{
-    background: #F7EDF0;
-    color: #9F9AA4; 
+
+.about{
+    margin-bottom: 60vh;
+    text-align: center;
 }
-.btn.outline{
-    background: none;
-    padding: 12px 22px;
-    border: 2px solid #EAEFB1;
-	color: #EAEFB1;
+.about1{
+ padding: 25%;
+ margin-bottom: 35vh;
 }
-.btn.outline:hover {
-    color:#F9FAE9;
-    border: 2px solid #F9FAE9;
+.players{
+    margin-top: 50px;
+    border-radius: 50%;
+    width: 50%;
 }
-.btn.outline:active{
-    border-color: #C0C491;
-	color: #C0C491;
-    box-shadow: #EAEFB1;
+.moreAbout{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1em;
+    grid:
+        "text thumbnails" 1fr/1fr 1fr;
+    margin-bottom: 100vh;
 }
-.btn.outline:focus{
-    outline: #C0C491;
-    box-shadow: #EAEFB1;
+.moreAboutText{
+    position: sticky;
+    top: 20vh;
+    grid-area: text;
+    align-self: start;
+}
+.thumbnails{
+    margin-top: 60vh;
+    position: relative;    
+}
+.tarotCard{
+    width: 250px;
+}
+.btn{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 0;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    color:var(--clr-3);
+    background-color:var(--clr-5);
+}
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+  }
+  .btn:hover {
+    color:var(--clr-5);
+    border-color: currentColor;
+    background-color:var(--clr-3);
+  }
+
+.cards{
+    background: url(stars.jpg);
+    background-size: cover;
+    padding: 2em;
+    font-size: 2rem;
+    height: 250vh;
+    position: relative;
+}
+.cardReading{
+    position: relative;
+    z-index: 2;
+    color: var(--clr-3);
+    position: sticky;
+    top: 2em;
+    margin: 0 auto;
 }
 .cardItem{
-    display: flex;
-    align-items: center;
+    padding: 5%;
+    display: grid;
+    grid-gap: 1em;
+    grid:
+        "img description" 1fr/1fr 1fr;
+}
+.cardImage{
+    grid-area: img;
+    align-self: start;
+}
+.description{
+    background: var(--clr-4);
+    color: var(--clr-1);
+    grid-area: description;
+}
+.cards::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background:linear-gradient(#DC8518 20%, transparent, var(--clr-5) 90%); 
+}
+footer{
+    font-size: 1rem;
+    background: var(--clr-5);
+    text-align: center;
+    padding: 25vh 0 50vh;
 }
 .apiLink{
-    color: #9F9AA4;
+    color: var(--clr-1);
 }
-p {
-    padding: 1px;
-    }
-.aboutHeading{
-    font-size: 14pt;
-    font-weight: bold;
-}    
-.about{
-    font-size: 11pt;
-}
+
 
  
 
