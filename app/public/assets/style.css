@@ -120,6 +120,7 @@ p{
     padding: 2em;
     font-size: 2rem;
     height: 250vh;
+    width: 100%;
     position: relative;
 }
 .cardReading{
