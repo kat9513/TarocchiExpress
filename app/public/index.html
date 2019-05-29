@@ -4,7 +4,7 @@
 <head>
     <title>Tarocchi</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Gudea|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Belleza|Rambla&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
@@ -118,7 +118,7 @@
                             function appendCards() {
                                 cardItem.append(
                                     $("<img>").addClass("cardImage").attr("src", display.image),
-                                    $("<div>").addClass("description").append("<h3 class='title'>" + card.name + "</h3><br>" + "<p>" + display.description + "</p>"),
+                                    $("<div>").addClass("description").append("<h3 class='title'>" + card.name + "</h3><br>" + "<p class='meaning'>" + display.description + "</p>"),
                                 );
 
                                 cardReading.append(cardItem);
