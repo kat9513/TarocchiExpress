@@ -56,17 +56,28 @@ p{
 }
 
 .about{
-    margin-bottom: 60vh;
     text-align: center;
+    display: grid;
+    grid:
+    ". about ." 30vh
+    ". players ." 150vh;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60vh;
+    grid-gap: 15px;
 }
 .about1{
- padding: 25%;
- margin-bottom: 35vh;
+    font-size: 15pt;
+    grid-area: about;
+    position: relative;
+    margin-bottom: 55vh;
 }
 .players{
+    grid-area: players;
+}
+img.playersImg{
     margin-top: 50px;
     border-radius: 50%;
-    width: 50%;
+    align-self: center;
 }
 .moreAbout{
     width: 80%;
@@ -85,17 +96,30 @@ p{
 }
 .thumbnails{
     margin-top: 60vh;
-    position: relative;    
+    position: relative;
+    padding: 0.3em;
+    
 }
 .tarotCard{
     width: 250px;
 }
+.readingButton{
+    text-align: center;
+    display: grid;
+    grid:
+    ". info ." 30vh;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 60vh;
+    grid-gap: 15px;
+}
 .aboutButton{
+    grid-area: info;
     padding-bottom: 10%;
 }
 .btn{
-    display: inline-block;
-    text-align: center;
+    width: 50%;
+    grid-area: button;
+    align-self: center;
     text-decoration: none;
     margin: 2px 0;
     border: solid 1px transparent;
