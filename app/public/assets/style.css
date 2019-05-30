@@ -96,6 +96,7 @@ img.playersImg{
 }
 .thumbnails{
     margin-top: 60vh;
+    grid-area: thumbnails;
     position: relative;
     padding: 0.3em;
     
@@ -200,10 +201,99 @@ footer{
     color: var(--clr-1);
 }
 
-@media (min-width: 600px) {
+@media only screen and (max-width: 860px) {
     .cards::before{
         background:linear-gradient(#D67B17 20%, transparent, var(--clr-5) 90%); 
     }
+    .intro{
+        display: grid;
+        grid:
+            "welcome" 75vh
+            "italian" 75vh
+            "tarocchi" 30vh;
+        font-size: 2rem;
+        font-family: 'Belleza', sans-serif;
+    }
+    
+    .intro1{
+        font-size: 18pt;
+        grid-area: welcome;
+        position: -webkit-sticky; position: sticky;
+        align-self: center;
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+    }
+    .intro2{
+        grid-area: italian;
+        position: -webkit-sticky; position: sticky;
+        top: 5em;
+        align-self: center;
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+    }
+    .intro3{
+        grid-area: tarocchi;
+        font-style: italic;
+        position: -webkit-sticky; position: sticky;
+        margin-top: 1.5em;
+        align-self: end;
+    }
+    .about{
+        text-align: center;
+        display: grid;
+        grid:
+        "about" 20vh
+        "players" 125vh;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 60vh;
+        grid-gap: 15px;
+    }
+    .about1{
+        font-size: 15pt;
+        grid-area: about;
+        position: relative;
+        margin-bottom: 10vh;
+    }
+    .players{
+        grid-area: players;
+        align-self: start;
+    }
+    .moreAbout{
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 1em;
+        grid:
+            "text" 75vh
+            "thumbnails" 75vh;
+        margin-bottom: 100vh;
+    }
+    .moreAboutText{
+        font-size: 15pt;
+        position: -webkit-sticky; position: sticky;
+        top: 20vh;
+        grid-area: text;
+        align-self: start;
+    }
+    .thumbnails{
+        margin-top: 60vh;
+        grid-area: thumbnails;
+        position: relative;
+        padding: 0.3em;
+        align-self: center;
+    }
+    img.tarotCard{
+        width: 25%;
+    }
+    .readingButton{
+    text-align: center;
+    display: grid;
+    grid:
+    "info" 30vh;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 60vh;
+    grid-gap: 15px;
+}
 }
 
 
