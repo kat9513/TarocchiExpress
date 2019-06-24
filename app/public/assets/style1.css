@@ -1,0 +1,45 @@
+:root{
+    --clr-1: #220901;
+    --clr-2: #621708;
+    --clr-3: #941B0C;
+    --clr-4: #BC3908;
+    --clr-5: #F6AA1C;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Rambla', sans-serif;
+  font-weight: 300;
+  background: linear-gradient(var(--clr-3), var(--clr-5));
+  margin: 0;
+  color: var(--clr-1);
+  font-size: 15pt;
+}
+
+img{
+    max-width: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+
+/* Other Classes for Page Styling */
+.card-title, .card-text {
+    float: right;
+}
+footer{
+  font-size: 1rem;
+  text-align: center;
+  color: var(--clr-1);
+}
+
+.apiLink{
+  color: var(--clr-1);
+}

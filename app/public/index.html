@@ -3,74 +3,67 @@
 
 <head>
     <title>Tarocchi</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Belleza|Rambla&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style1.css">
 </head>
 
-<body>
-    <div class="intro">
-        <p class="intro1">
-            Welcome to the world of Tarot!
-        </p>
-        <p class="intro2">
-            The word Tarot is derived from the Italian
-        </p>
-        <p class="intro3">
-            Tarocchi
-        </p>
-    </div>
-    <div class="about">
-        <p class="about1">
-            Though the origins of the cards are
-            disputed the earliest documentation of tarot packs are recorded from Northern Italy
-            in the mid-Quattrocento.
-        </p>
-        <div class="players">
-            <img class="playersImg" src="imgs/TheTarocchiPlayer.jpg">
+<body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Tarocchi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Cards</a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="moreAbout">
-        <div class="moreAboutText">
-            <p class="about2" style="line-height: 150%;">
-                These early tarot packs would have been hand painted for the purpose of gaming, with little
-                mysticism in the minds of their creators. It was not until
-                the 18th century that the use of tarot decks for cartomancy became widespread, and that they
-                developed a new association with the occult.
-            </p>
-            <br />
-            <p class="about3" style="line-height: 150%;">
-                There are many holes in the story of how tarot came to be associated with divination, but
-                their
-                enigmatic origins and charming illustrations will no doubt continue captivating us for years
-                to
-                come.
+    </nav>
+    
+    <div id="page-content">
+        
+        <div class = "container text-center">
+            <div class="readingButton">
+            <p class="aboutButton">
+                To receive a tarot reading of your own, try this button and scroll below!
+                <br />
+                <button class="btn" id="submit">Click For a Reading</button>
+
             </p>
         </div>
-
-        <div class="thumbnails">
-            <img class="tarotCard" src="imgs/tarot2.jpg" alt="">
-            <img class="tarotCard" src="imgs/tarot1.jpg" alt="">
-            <img class="tarotCard" src="imgs/tarot3.jpg" alt="">
-        </div>
-
-    </div>
-    <div class="readingButton">
-        <p class="aboutButton">
-            To receive a tarot reading of your own, try this button and scroll below!
-            <br/>
-            <button class="btn" id="submit">Click For a Reading</button>
-
-        </p>
-    </div>
-    <div class="cards">
-        <div class="cardReading">
-            <!--card reading appears here-->
+        <div class="cards">
+            <div class="cardReading row">
+                <!--card reading appears here-->
+            </div>
         </div>
     </div>
+        </div>
+        
     </div>
-    <footer class="footer">
-        <a class="apiLink" href="/api/cards">Card API</a>
+   
+    <footer id="sticky-footer" class="py-4">
+        <div class="container text-center">
+            <a class="apiLink" href="/api/cards">Card API</a>
+        </div>
     </footer>
 
 </body>
@@ -107,14 +100,20 @@
                         //iterates through our nested image array
                         for (var j = 0; j < 1; j++) {
 
-                            var cardItem = $("<div class= 'cardItem'>");
+                            var cardItem = $("<div class= 'cardItem card col-md-4'>");
 
                             var display = card.img[Math.floor(Math.random() * card.img.length)];
 
                             function appendCards() {
                                 cardItem.append(
-                                    $("<img>").addClass("cardImage").attr("src", display.image),
-                                    $("<div>").addClass("description").append("<h3 class='title'>" + card.name + "</h3><br>" + "<p class='meaning'>" + display.description + "</p>"),
+                                    $("<div class='row no-gutters'>").append(
+                                        $("<div class='col-md-6'>").append(
+                                            $("<img class = 'card-image'>").attr("src", display.image)),
+                                        $("<div class='col-md-6'>").append(
+                                            $("<div>").addClass("card-body").append("<h5 class='card-title text-right'>" + card.name + "</h5>" + "<p class='card-text text-right'>" + display.description + "</p>")),
+                                    ),
+
+                                    //$("<div>").addClass("description").append("<h3 class='title'>" + card.name + "</h3><br>" + "<p class='meaning'>" + display.description + "</p>"),
                                 );
 
                                 cardReading.append(cardItem);
