@@ -43,3 +43,9 @@ footer{
 .apiLink{
   color: var(--clr-1);
 }
+
+#submit{
+  margin: 5%;
+  background-color: #220901;
+  border-color:  #220901;
+}
