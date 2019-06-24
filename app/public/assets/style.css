@@ -5,303 +5,136 @@
     --clr-4: #BC3908;
     --clr-5: #F6AA1C;
 }
+
+html,
+body {
+  min-height: 100vh;
+  font-family: 'Rambla', sans-serif;
+  font-weight: 300;
+  background: linear-gradient(var(--clr-3), var(--clr-5));
+  background-repeat: no-repeat;
+  margin: 0;
+  color: var(--clr-1);
+  font-size: 15pt;
+}
+
 img{
     max-width: 100%;
 }
-body{
-    font-family: 'Rambla', sans-serif;
-    font-weight: 300;
-    background: linear-gradient(var(--clr-3), var(--clr-5));
-    min-height: 100vh;
-    margin: 0;
-    color: var(--clr-1);
-    font-size: 24px;
+
+#page-content {
+  flex: 1 0 auto;
 }
 
-.navbar-brand{
-    font-size: 24px;
+#sticky-footer {
+  flex-shrink: none;
 }
 
-.nav-link{
-    font-size: 20px;
+
+/* Other Classes for Page Styling */
+.card-title, .card-text {
+    float: right;
 }
+footer{
+  font-size: 1rem;
+  text-align: center;
+  color: var(--clr-1);
+}
+
+.apiLink{
+  color: var(--clr-1);
+}
+
+#submit{
+  margin: 5%;
+  background-color: #220901;
+  border-color:  #220901;
+}
+
+
+
+
+/* About Page Styling */
 
 .intro{
-    display: grid;
-    grid:
-        "welcome welcome" 75vh
-        "italian tarocchi" 125vh/ max-content 1fr;
-    margin-bottom: 60vh;
-    grid-gap: 15px;
-    font-size: 3rem;
-    font-family: 'Belleza', sans-serif;
+  display: grid;
+  grid:
+      "welcome welcome" 75vh
+      "italian tarocchi" 125vh/ max-content 1fr;
+  margin-bottom: 60vh;
+  grid-gap: 15px;
+  font-size: 3rem;
+  font-family: 'Belleza', sans-serif;
 }
 
 .intro1{
-    grid-area: welcome;
-    align-self: center;
-    position: -webkit-sticky; position: sticky;
-    top: 2em;
-    margin-bottom: 1.5em;
+  grid-area: welcome;
+  align-self: center;
+  position: -webkit-sticky; position: sticky;
+  top: 2em;
+  margin-bottom: 1.5em;
 }
 .intro2{
-    grid-area: italian;
-    font-weight: 600;
-    position: -webkit-sticky; position: sticky;
-    top: 5em;
-    align-self: center;
+  grid-area: italian;
+  font-weight: 600;
+  position: -webkit-sticky; position: sticky;
+  top: 5em;
+  align-self: center;
 }
 .intro3{
-    grid-area: tarocchi;
-    font-weight: 600;
-    font-style: italic;
-    position: -webkit-sticky; position: sticky;
-    align-self: end;
+  grid-area: tarocchi;
+  font-weight: 600;
+  font-style: italic;
+  position: -webkit-sticky; position: sticky;
+  align-self: end;
 }
 
 .about{
-    text-align: center;
-    display: grid;
-    grid:
-    ". about ." 30vh
-    ". players ." 150vh;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 60vh;
-    grid-gap: 15px;
+  text-align: center;
+  display: grid;
+  grid:
+  ". about ." 30vh
+  ". players ." 150vh;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 60vh;
+  grid-gap: 15px;
 }
 .about1{
-    font-size: 15pt;
-    grid-area: about;
-    position: relative;
-    margin-bottom: 55vh;
+  font-size: 15pt;
+  grid-area: about;
+  position: relative;
+  margin-bottom: 55vh;
 }
 .players{
-    grid-area: players;
+  grid-area: players;
 }
 img.playersImg{
-    margin-top: 50px;
-    border-radius: 50%;
-    align-self: center;
+  margin-top: 50px;
+  border-radius: 50%;
+  align-self: center;
 }
 .moreAbout{
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1em;
-    grid:
-        "text thumbnails" 1fr/1fr 1fr;
-    margin-bottom: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1em;
+  grid:
+      "text thumbnails" 1fr/1fr 1fr;
+  margin-bottom: 100vh;
 }
 .moreAboutText{
-    position: -webkit-sticky; position: sticky;
-    top: 20vh;
-    grid-area: text;
-    align-self: start;
+  position: -webkit-sticky; position: sticky;
+  top: 20vh;
+  grid-area: text;
+  align-self: start;
 }
 .thumbnails{
-    margin-top: 60vh;
-    grid-area: thumbnails;
-    position: relative;
-    padding: 0.3em;
-    
+  margin-top: 60vh;
+  grid-area: thumbnails;
+  position: relative;
+  padding: 0.3em;
+  
 }
 .tarotCard{
-    width: 250px;
+  width: 250px;
 }
-.readingButton{
-    text-align: center;
-    display: grid;
-    grid:
-    ". info ." 30vh;
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 60vh;
-    grid-gap: 15px;
-}
-.aboutButton{
-    grid-area: info;
-    padding-bottom: 10%;
-}
-.btn{
-    width: 50%;
-    grid-area: button;
-    align-self: center;
-    text-decoration: none;
-    margin: 2px 0;
-    border: solid 1px transparent;
-    border-radius: 4px;
-    padding: 0.5em 1em;
-    color: #C4827A;
-    background-color: var(--clr-3);
-}
-.btn:active {
-    transform: translateY(1px);
-    filter: saturate(150%);
-  }
-  .btn:hover {
-    color: var(--clr-3);
-    background-color: #C4827A;
-  }
-
-.cards{
-    margin: 0;
-    background: url(stars.jpg);
-    background-size: cover;
-    padding: 2em;
-    font-size: 2rem;
-    height: 250vh;
-    width: 100%;
-    position: relative;
-}
-.cardReading{
-    position: relative;
-    z-index: 2;
-    color: var(--clr-3);
-    position: -webkit-sticky; position: sticky;
-    top: 2em;
-    margin: 0 auto;
-}
-.cardItem{
-    padding: 5%;
-    display: grid;
-    grid-gap: 1em;
-    grid:
-        "img description" 1fr/1fr 1fr;
-}
-.cardImage{
-    grid-area: img;
-    align-self: start;
-}
-.description{
-    text-align: center;
-    background: var(--clr-4);
-    color: var(--clr-1);
-    grid-area: description;
-}
-.cards::before{
-    content:"";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    background:linear-gradient(#DC8518 20%, transparent, var(--clr-5) 90%); 
-}
-h3.title{
-    font-weight: 600;
-    font-style: italic;
-    padding-top: 10%;
-}
-p.meaning{
-    margin:0;
-}
-footer{
-    font-size: 1rem;
-    background: var(--clr-5);
-    text-align: center;
-    padding: 25vh 0 50vh;
-}
-.apiLink{
-    color: var(--clr-1);
-}
-
-
-@media only screen and (max-width: 860px) {
-    .cards::before{
-        background:linear-gradient(#D67B17 20%, transparent, var(--clr-5) 90%); 
-    }
-    .intro{
-        display: grid;
-        grid:
-            "welcome" 75vh
-            "italian" 75vh
-            "tarocchi" 30vh;
-        font-size: 2rem;
-        font-family: 'Belleza', sans-serif;
-    }
-    
-    .intro1{
-        font-size: 18pt;
-        grid-area: welcome;
-        position: -webkit-sticky; position: sticky;
-        align-self: center;
-        margin-top: 2em;
-        margin-bottom: 1.5em;
-    }
-    .intro2{
-        grid-area: italian;
-        position: -webkit-sticky; position: sticky;
-        top: 5em;
-        align-self: center;
-        margin-top: 2em;
-        margin-bottom: 1.5em;
-    }
-    .intro3{
-        grid-area: tarocchi;
-        font-style: italic;
-        position: -webkit-sticky; position: sticky;
-        margin-top: 1.5em;
-        align-self: end;
-    }
-    .about{
-        text-align: center;
-        display: grid;
-        grid:
-        "about" 20vh
-        "players" 125vh;
-        grid-template-columns: repeat(1, 1fr);
-        margin-bottom: 60vh;
-        grid-gap: 15px;
-    }
-    .about1{
-        font-size: 15pt;
-        grid-area: about;
-        position: relative;
-        margin-bottom: 10vh;
-    }
-    .players{
-        grid-area: players;
-        align-self: start;
-    }
-    .moreAbout{
-        width: 80%;
-        margin: 0 auto;
-        display: grid;
-        grid-gap: 1em;
-        grid:
-            "text" 75vh
-            "thumbnails" 75vh;
-        margin-bottom: 100vh;
-    }
-    .moreAboutText{
-        font-size: 15pt;
-        position: -webkit-sticky; position: sticky;
-        top: 20vh;
-        grid-area: text;
-        align-self: start;
-    }
-    .thumbnails{
-        margin-top: 60vh;
-        grid-area: thumbnails;
-        position: relative;
-        padding: 0.3em;
-        align-self: center;
-    }
-    img.tarotCard{
-        width: 25%;
-    }
-    .readingButton{
-    text-align: center;
-    display: grid;
-    grid:
-    "info" 30vh;
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 60vh;
-    grid-gap: 15px;
-}
-}
-
-
- 
-
-
