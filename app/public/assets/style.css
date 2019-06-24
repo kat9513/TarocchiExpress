@@ -30,6 +30,9 @@ img{
   flex-shrink: none;
 }
 
+ul.navbar-nav{
+  float: right;
+}
 
 /* Other Classes for Page Styling */
 .card-title, .card-text {
