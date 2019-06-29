@@ -66,6 +66,11 @@ a:hover{
 .card-title, .card-text {
     justify-content: center;
 }
+
+.cardResult{
+  margin-top: 50px;
+}
+
 footer{
   font-size: 1rem;
   text-align: center;
@@ -78,6 +83,7 @@ footer{
 
 #submit{
   margin: 5%;
+  margin-top: 75px;
   background-color: #220901;
   border-color:  #220901;
 }
@@ -177,7 +183,18 @@ img.playersImg{
 /* Media Queries */
 
 @media (max-width: 667px) {
-  body{
-    background: #941B0C;
+
+  ul.navbar-nav.ml-auto{
+    font-size: 25pt;
   }
+
+  #submit{
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .cards{
+    margin-bottom: 50px;
+  }
+
 }
