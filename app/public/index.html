@@ -60,7 +60,7 @@
 
         <div class="container-fluid">
             <!--<div class="row">-->
-            <div class="cards col-10 mx-auto">
+            <div class="cards col-12 mx-auto">
 
                 <div class="cardReading card-deck">
                     <!--card reading appears here-->
@@ -120,16 +120,16 @@
                         //iterates through our nested image array
                         for (var j = 0; j < 1; j++) {
 
-                            var cardItem = $("<div class= 'col-md-4 col-sm-12' <div class = 'card'></div> </div>");
+                            var cardItem = $("<div class= 'col-md-4 cardResult' <div class = 'card'></div> </div>");
 
                             var display = card.img[Math.floor(Math.random() * card.img.length)];
 
                             function appendCards() {
                                 cardItem.append(
                                     $("<div class='row no-gutters'>").append(
-                                        $("<div class='col-6'>").append(
+                                        $("<div class='col-6 cardImage'>").append(
                                             $("<img class = 'card-image'>").attr("src", display.image)),
-                                        $("<div class='col-6'>").append(
+                                        $("<div class='col-6 cardBody'>").append(
                                             $("<div>").addClass("card-body").append("<h5 class='card-title text-right'>" + card.name + "</h5>" + "<p class='card-text text-right'>" + display.description + "</p>")),
                                     ),
 

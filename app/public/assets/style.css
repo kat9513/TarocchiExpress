@@ -64,7 +64,7 @@ a:hover{
 }
 
 .card-title, .card-text {
-    float: right;
+    justify-content: center;
 }
 footer{
   font-size: 1rem;
@@ -172,4 +172,12 @@ img.playersImg{
 }
 .tarotCard{
   width: 250px;
+}
+
+/* Media Queries */
+
+@media (max-width: 667px) {
+  body{
+    background: #941B0C;
+  }
 }
