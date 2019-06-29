@@ -30,9 +30,14 @@ img{
   flex-shrink: none;
 }
 
-ul.navbar-nav{
-  float: right;
+.navbar{
+  background-color: #220901;
 }
+
+.fa-arrow-circle-down{
+  color: var(--clr-5);
+}
+
 
 /* Other Classes for Page Styling */
 .card-title, .card-text {

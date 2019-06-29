@@ -1,116 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>About</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Belleza|Rambla&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html>
+    <nav class="navbar navbar-expand-lg">
 
-    <head>
-        <title>Tarocchi</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Belleza|Rambla&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./assets/style.css">
-    </head>
+        <a class="navbar-brand" href="#">Tarocchi</a>
 
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Tarocchi</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Cards</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="intro">
-            <p class="intro1">
-                Welcome to the world of Tarot!
-            </p>
-            <p class="intro2">
-                The word Tarot is derived from the Italian
-            </p>
-            <p class="intro3">
-                Tarocchi
-            </p>
-        </div>
-        <div class="about">
-            <p class="about1">
-                Though the origins of the cards are
-                disputed the earliest documentation of tarot packs are recorded from Northern Italy
-                in the mid-Quattrocento.
-            </p>
-            <div class="players">
-                <img class="playersImg" src="imgs/TheTarocchiPlayer.jpg">
-                <figcaption>This fresco is commonly known as The Tarocchi Players. It is from the Casa Borromeo, in
-                    Milan, and was probably painted in the 1440s.</figcaption>
-            </div>
-        </div>
-        <div class="moreAbout">
-            <div class="moreAboutText">
-                <p class="about2" style="line-height: 150%;">
-                    These early tarot packs would have been hand painted for the purpose of gaming, with little
-                    mysticism in the minds of their creators. It was not until
-                    the 18th century that the use of tarot decks for cartomancy became widespread, and that they
-                    developed a new association with the occult.
-                </p>
-                <br />
-                <p class="about3" style="line-height: 150%;">
-                    There are many holes in the story of how tarot came to be associated with divination, but
-                    their
-                    enigmatic origins and charming illustrations will no doubt continue captivating us for years
-                    to
-                    come.
-                </p>
-            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon">
+                <i class="fas fa-arrow-circle-down fa-1x"></i>
+            </span>
+        </button>
 
-            <div class="thumbnails">
-                <div class="row">
-                    <img class="tarotCard" src="imgs/tarot2.jpg" alt="">
+        <div class="collapse navbar-collapse" id="navbarNav">
 
-                </div>
-                <div class="row">
-                    <img class="tarotCard" src="imgs/tarot1.jpg" alt="">
-
-                </div>
-            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Cards</a>
+                </li>
+            </ul>
 
         </div>
-        <footer id="sticky-footer" class="py-4">
-            <div class="container text-center">
-                <a class="apiLink" href="/api/cards">Card API</a>
-            </div>
-        </footer>
 
-        <div id="scripts">
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
+    </nav>
+    <div class="intro">
+        <p class="intro1">
+            Welcome to the world of Tarot!
+        </p>
+        <p class="intro2">
+            The word Tarot is derived from the Italian
+        </p>
+        <p class="intro3">
+            Tarocchi
+        </p>
+    </div>
+    <div class="about">
+        <p class="about1">
+            Though the origins of the cards are
+            disputed the earliest documentation of tarot packs are recorded from Northern Italy
+            in the mid-Quattrocento.
+        </p>
+        <div class="players">
+            <img class="playersImg" src="imgs/TheTarocchiPlayer.jpg">
+            <figcaption>This fresco is commonly known as The Tarocchi Players. It is from the Casa Borromeo, in
+                Milan, and was probably painted in the 1440s.</figcaption>
+        </div>
+    </div>
+    <div class="moreAbout">
+        <div class="moreAboutText">
+            <p class="about2" style="line-height: 150%;">
+                These early tarot packs would have been hand painted for the purpose of gaming, with little
+                mysticism in the minds of their creators. It was not until
+                the 18th century that the use of tarot decks for cartomancy became widespread, and that they
+                developed a new association with the occult.
+            </p>
+            <br />
+            <p class="about3" style="line-height: 150%;">
+                There are many holes in the story of how tarot came to be associated with divination, but
+                their
+                enigmatic origins and charming illustrations will no doubt continue captivating us for years
+                to
+                come.
+            </p>
         </div>
 
-    </body>
+        <div class="thumbnails">
+            <div class="row">
+                <img class="tarotCard" src="imgs/tarot2.jpg" alt="">
 
-    </html>
+            </div>
+            <div class="row">
+                <img class="tarotCard" src="imgs/tarot1.jpg" alt="">
+
+            </div>
+        </div>
+
+    </div>
+    <footer id="sticky-footer" class="py-4">
+        <div class="container text-center">
+            <a class="apiLink" href="/api/cards">Card API</a>
+        </div>
+    </footer>
+
+    <div id="scripts">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    </div>
+
+</body>
+
+</html>
