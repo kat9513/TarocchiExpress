@@ -9,7 +9,7 @@
 html,
 body {
   min-height: 100vh;
-  font-family: 'Rambla', sans-serif;
+  font-family: 'Futura';
   font-weight: 300;
   background: linear-gradient(var(--clr-3), var(--clr-5));
   background-repeat: no-repeat;
@@ -34,12 +34,35 @@ img{
   background-color: #220901;
 }
 
+ul.navbar-nav.ml-auto, #submit{
+  font-family: 'Staatliches', cursive;
+}
+
+a.navbar-brand{
+  color: #F6AA1C;
+  font-family: 'Paytone One', sans-serif;
+  font-size: 25pt;
+}
+
+a.nav-link{
+  color: #F6AA1C;
+}
+
+a:hover{
+  color: rgb(206, 138, 13);
+}
+
 .fa-arrow-circle-down{
   color: var(--clr-5);
 }
 
 
 /* Other Classes for Page Styling */
+
+.card-title{
+  font-family:'Paytone One', sans-serif;
+}
+
 .card-title, .card-text {
     float: right;
 }
@@ -81,6 +104,9 @@ footer{
   position: -webkit-sticky; position: sticky;
   top: 2em;
   margin-bottom: 1.5em;
+  font-family: 'Staatliches', cursive;
+  font-style: italic;
+
 }
 .intro2{
   grid-area: italian;
@@ -88,13 +114,14 @@ footer{
   position: -webkit-sticky; position: sticky;
   top: 5em;
   align-self: center;
+  font-family: 'Staatliches', cursive;
 }
 .intro3{
   grid-area: tarocchi;
   font-weight: 600;
-  font-style: italic;
   position: -webkit-sticky; position: sticky;
   align-self: end;
+  font-family: 'Paytone One', sans-serif;
 }
 
 .about{
