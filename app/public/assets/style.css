@@ -109,7 +109,7 @@ footer{
   align-self: center;
   position: -webkit-sticky; position: sticky;
   top: 2em;
-  margin-bottom: 1.5em;
+  margin-bottom: 5em;
   font-family: 'Staatliches', cursive;
   font-style: italic;
 
@@ -126,6 +126,7 @@ footer{
   grid-area: tarocchi;
   font-weight: 600;
   position: -webkit-sticky; position: sticky;
+  margin-top: 2.5em;
   align-self: end;
   font-family: 'Paytone One', sans-serif;
 }
@@ -134,17 +135,17 @@ footer{
   text-align: center;
   display: grid;
   grid:
-  ". about ." 30vh
+  ". about ." 75vh
   ". players ." 150vh;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 60vh;
+  margin-bottom: 100vh;
   grid-gap: 15px;
 }
 .about1{
   font-size: 15pt;
   grid-area: about;
   position: relative;
-  margin-bottom: 55vh;
+  margin-bottom: 100vh;
 }
 .players{
   grid-area: players;
@@ -154,13 +155,18 @@ img.playersImg{
   border-radius: 50%;
   align-self: center;
 }
+
+figcaption{
+  margin-top: 25px;
+}
+
 .moreAbout{
   width: 80%;
   margin: 0 auto;
   display: grid;
   grid-gap: 1em;
   grid:
-      "text thumbnails" 1fr/1fr 1fr;
+      "text thumbnails" 1fr/1fr 2fr;
   margin-bottom: 100vh;
 }
 .moreAboutText{
@@ -172,17 +178,19 @@ img.playersImg{
 .thumbnails{
   margin-top: 60vh;
   grid-area: thumbnails;
-  position: relative;
-  padding: 0.3em;
-  
+  position: relative;  
+  margin-left: 100px;
 }
 .tarotCard{
   width: 250px;
+  padding: 15px;
 }
 
 /* Media Queries */
 
 @media (max-width: 667px) {
+
+  /* index */
 
   ul.navbar-nav.ml-auto{
     font-size: 25pt;
@@ -197,4 +205,64 @@ img.playersImg{
     margin-bottom: 50px;
   }
 
+  /* about */
+
+  .intro{
+    display: grid;
+    grid:
+        "welcome" 45vh
+        "italian" 75vh
+        "tarocchi" 45vh / max-content 1fr;
+
+    margin-bottom: 60vh;
+    grid-gap: 0px;
+    font-size: 25px;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .intro2{
+    margin-bottom: 3em;
+  }
+
+  .intro3{
+    align-self: center;
+    top: 12em;
+  }
+
+  .about{
+    display: grid;
+    grid:
+    "about" 30vh
+    "players" 150vh;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: vh;
+    grid-gap: 0px;
+  }
+  
+  .moreAbout{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1em;
+    grid:
+        "text" 1fr
+        "thumbnails" 1fr / 1fr;
+    margin-bottom: 100vh;
+  }
+  .moreAboutText{
+    top: 2vh;
+    grid-area: text;
+    align-self: start;
+    margin-bottom: 5em;
+  }
+  .thumbnails{
+    grid-area: thumbnails;
+    position: -webkit-sticky; position: sticky;
+    top: 200em;
+    margin-top: 5px;
+    margin-left: 45px;
+
+  }
 }
